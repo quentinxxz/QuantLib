@@ -48,9 +48,6 @@ def prepareBeixiangData():
     df['today_balance']=df['today_balance_1']+ df['today_balance_3']
     df=df.loc[:,['datetime','total_in','total_out','total_net_in','grand_total_in','today_balance']]
     
-    
-    df= df_1
-    
     # 按日期排序
     df.set_index('datetime',drop=False,append=False,inplace=True)
     df.sort_index(ascending=True,inplace=True)
